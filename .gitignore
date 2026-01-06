@@ -186,3 +186,6 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Daily work reports
+daily_work_report.txt
