@@ -1,5 +1,3 @@
-# 🚀 Nelumbus AI Assessment System
-
 Production-ready AI-powered assessment platform with real-time timer, adaptive questions, and comprehensive performance analytics.
 
 ## 🌟 Key Features

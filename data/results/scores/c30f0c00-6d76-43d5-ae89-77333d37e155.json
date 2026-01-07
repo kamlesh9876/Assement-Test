@@ -1,0 +1,24 @@
+{
+  "attempt_id": "c30f0c00-6d76-43d5-ae89-77333d37e155",
+  "timestamp": "2026-01-07T02:47:10.467649",
+  "scores": {
+    "total_questions": 20,
+    "correct_answers": 1,
+    "incorrect_answers": 19,
+    "total_score": 1,
+    "max_score": 20,
+    "percentage": 5.0
+  },
+  "analytics": {
+    "performance_level": "Poor",
+    "finalized_reason": "user_finished",
+    "time_taken_seconds": 34,
+    "average_time_per_question": 1.7
+  },
+  "performance_metrics": {
+    "total_time_seconds": 34,
+    "average_response_time": 1.7,
+    "time_per_question": 1.7,
+    "completion_rate": 10.0
+  }
+}

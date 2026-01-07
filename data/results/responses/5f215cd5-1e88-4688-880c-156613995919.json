@@ -1,0 +1,53 @@
+{
+  "attempt_id": "5f215cd5-1e88-4688-880c-156613995919",
+  "timestamp": "2026-01-07T02:54:38.527246",
+  "responses": [
+    {
+      "question_id": "q1",
+      "question_text": "Which sorting algorithm has the best average case time complexity?",
+      "topic": "complexity",
+      "difficulty": "hard",
+      "user_answer": "Merge Sort",
+      "correct_answer": "Merge Sort",
+      "is_correct": true,
+      "response_time": 6.434013843536377,
+      "confidence": 0.8
+    },
+    {
+      "question_id": "q2",
+      "question_text": "What is the time complexity of binary search on a sorted array?",
+      "topic": "algorithms",
+      "difficulty": "hard",
+      "user_answer": "O(log n)",
+      "correct_answer": "O(log n)",
+      "is_correct": true,
+      "response_time": 10.83287239074707,
+      "confidence": 0.8
+    }
+  ],
+  "answers": {
+    "q1": 1,
+    "q2": 1
+  },
+  "total_answered": 2,
+  "unanswered": [
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q18",
+    "q19",
+    "q20"
+  ]
+}

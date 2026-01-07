@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "combined_at": "2026-01-07T02:54:38.778674",
+    "version": "2.1.0",
+    "data_sources": [
+      "candidates",
+      "scores"
+    ],
+    "attempt_id": "b056ddb7-ac0b-480a-b76a-3c1615b5396c"
+  },
+  "candidate_info": {
+    "name": "Test User",
+    "branch": "Computer Science",
+    "passing_year": 2025,
+    "university": "Test University",
+    "programming_language": "Python",
+    "difficulty": "Medium",
+    "assessment_type": "MCQ only"
+  },
+  "assessment_config": {
+    "total_questions": 20,
+    "duration_seconds": 1200
+  },
+  "questions": [],
+  "responses": [],
+  "scores": {
+    "total_questions": 20,
+    "correct_answers": 18,
+    "incorrect_answers": 2,
+    "total_score": 18,
+    "max_score": 20,
+    "percentage": 90.0
+  },
+  "analytics": {
+    "performance_level": "Excellent",
+    "finalized_reason": "completed",
+    "time_taken_seconds": 600,
+    "average_time_per_question": 30.0
+  },
+  "performance_metrics": {
+    "total_time_seconds": 600,
+    "average_response_time": 30.0,
+    "completion_rate": 100.0
+  }
+}

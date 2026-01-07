@@ -1,0 +1,152 @@
+{
+  "attempt_id": "42359735-7898-4ff3-bcf1-b43c4b133a23",
+  "timestamp": "2026-01-07T02:38:46.193929",
+  "responses": [
+    {
+      "question_id": "q1",
+      "question_text": "What is the time complexity of binary search on a sorted array?",
+      "topic": "algorithms",
+      "difficulty": "hard",
+      "user_answer": "O(log n)",
+      "correct_answer": "O(log n)",
+      "is_correct": true,
+      "response_time": 6.637769937515259,
+      "confidence": 0.8
+    },
+    {
+      "question_id": "q2",
+      "question_text": "Which Python data structure is immutable?",
+      "topic": "data_structures",
+      "difficulty": "easy",
+      "user_answer": "Dictionary",
+      "correct_answer": "Tuple",
+      "is_correct": false,
+      "response_time": 7.6987597942352295,
+      "confidence": 0.3
+    },
+    {
+      "question_id": "q3",
+      "question_text": "What is the purpose of the '__init__' method in Python classes?",
+      "topic": "oop",
+      "difficulty": "medium",
+      "user_answer": "Create a new instance",
+      "correct_answer": "Initialize instance attributes",
+      "is_correct": false,
+      "response_time": 7.45785927772522,
+      "confidence": 0.3
+    },
+    {
+      "question_id": "q4",
+      "question_text": "What is the Singleton design pattern used for?",
+      "topic": "design_patterns",
+      "difficulty": "hard",
+      "user_answer": "Ensure only one instance",
+      "correct_answer": "Ensure only one instance",
+      "is_correct": true,
+      "response_time": 6.700157642364502,
+      "confidence": 0.8
+    },
+    {
+      "question_id": "q4",
+      "question_text": "What is the Singleton design pattern used for?",
+      "topic": "design_patterns",
+      "difficulty": "hard",
+      "user_answer": "Ensure only one instance",
+      "correct_answer": "Ensure only one instance",
+      "is_correct": true,
+      "response_time": 13.515162944793701,
+      "confidence": 0.8
+    },
+    {
+      "question_id": "q5",
+      "question_text": "What is unit testing?",
+      "topic": "testing",
+      "difficulty": "medium",
+      "user_answer": "Testing performance",
+      "correct_answer": "Testing individual components",
+      "is_correct": false,
+      "response_time": 7.732384204864502,
+      "confidence": 0.3
+    },
+    {
+      "question_id": "q6",
+      "question_text": "What is horizontal scaling?",
+      "topic": "scalability",
+      "difficulty": "medium",
+      "user_answer": "Increasing server power",
+      "correct_answer": "Adding more machines",
+      "is_correct": false,
+      "response_time": 8.681097984313965,
+      "confidence": 0.3
+    },
+    {
+      "question_id": "q7",
+      "question_text": "What is the purpose of the 'self' parameter in Python methods?",
+      "topic": "basics",
+      "difficulty": "easy",
+      "user_answer": "Refers to the instance calling the method",
+      "correct_answer": "Refers to the instance calling the method",
+      "is_correct": true,
+      "response_time": 6.6372435092926025,
+      "confidence": 0.8
+    },
+    {
+      "question_id": "q8",
+      "question_text": "What does HTTP stand for?",
+      "topic": "web",
+      "difficulty": "easy",
+      "user_answer": "High-Speed Transfer Protocol",
+      "correct_answer": "HyperText Transfer Protocol",
+      "is_correct": false,
+      "response_time": 7.446278810501099,
+      "confidence": 0.3
+    },
+    {
+      "question_id": "q9",
+      "question_text": "What is code review primarily used for?",
+      "topic": "best_practices",
+      "difficulty": "medium",
+      "user_answer": "Performance optimization",
+      "correct_answer": "Quality assurance",
+      "is_correct": false,
+      "response_time": 18.733022451400757,
+      "confidence": 0.3
+    },
+    {
+      "question_id": "q10",
+      "question_text": "Which sorting algorithm has the best average case time complexity?",
+      "topic": "complexity",
+      "difficulty": "hard",
+      "user_answer": "Bubble Sort",
+      "correct_answer": "Merge Sort",
+      "is_correct": false,
+      "response_time": 9.774455308914185,
+      "confidence": 0.3
+    }
+  ],
+  "answers": {
+    "q1": 1,
+    "q2": 1,
+    "q3": 2,
+    "q4": 0,
+    "q5": 3,
+    "q6": 1,
+    "q7": 0,
+    "q8": 1,
+    "q9": 1,
+    "q10": 3
+  },
+  "total_answered": 10,
+  "unanswered": [
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q18",
+    "q19",
+    "q20"
+  ]
+}

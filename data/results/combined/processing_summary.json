@@ -1,0 +1,77 @@
+{
+  "processed_at": "2026-01-07T02:54:38.569817",
+  "total_attempts": 4,
+  "successful_combinations": 4,
+  "failed_combinations": 0,
+  "attempts": {
+    "42359735-7898-4ff3-bcf1-b43c4b133a23": {
+      "status": "success",
+      "file": "data\\results\\combined\\42359735-7898-4ff3-bcf1-b43c4b133a23.json",
+      "data_sources": [
+        "candidates",
+        "questions",
+        "scores"
+      ],
+      "summary": {
+        "total_questions": 20,
+        "correct_answers": 3,
+        "total_score": 3,
+        "max_score": 20,
+        "percentage": 15.0,
+        "performance_level": "Poor",
+        "total_time": 119,
+        "average_response_time": 5.95,
+        "time_per_question": 5.95
+      }
+    },
+    "5f215cd5-1e88-4688-880c-156613995919": {
+      "status": "success",
+      "file": "data\\results\\combined\\5f215cd5-1e88-4688-880c-156613995919.json",
+      "data_sources": [
+        "candidates",
+        "questions",
+        "scores"
+      ],
+      "summary": {
+        "total_questions": 20,
+        "correct_answers": 2,
+        "total_score": 2,
+        "max_score": 20,
+        "percentage": 10.0,
+        "performance_level": "Poor",
+        "total_time": 36,
+        "average_response_time": 1.8,
+        "time_per_question": 1.8
+      }
+    },
+    "b056ddb7-ac0b-480a-b76a-3c1615b5396c": {
+      "status": "success",
+      "file": "data\\results\\combined\\b056ddb7-ac0b-480a-b76a-3c1615b5396c.json",
+      "data_sources": [
+        "candidates",
+        "scores"
+      ],
+      "summary": {}
+    },
+    "c30f0c00-6d76-43d5-ae89-77333d37e155": {
+      "status": "success",
+      "file": "data\\results\\combined\\c30f0c00-6d76-43d5-ae89-77333d37e155.json",
+      "data_sources": [
+        "candidates",
+        "questions",
+        "scores"
+      ],
+      "summary": {
+        "total_questions": 20,
+        "correct_answers": 1,
+        "total_score": 1,
+        "max_score": 20,
+        "percentage": 5.0,
+        "performance_level": "Poor",
+        "total_time": 34,
+        "average_response_time": 1.7,
+        "time_per_question": 1.7
+      }
+    }
+  }
+}

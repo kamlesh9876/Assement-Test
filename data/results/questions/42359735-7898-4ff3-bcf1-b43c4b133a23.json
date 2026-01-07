@@ -1,0 +1,294 @@
+{
+  "attempt_id": "42359735-7898-4ff3-bcf1-b43c4b133a23",
+  "timestamp": "2026-01-07T02:38:46.193929",
+  "questions": [
+    {
+      "id": "q1",
+      "topic": "algorithms",
+      "difficulty": "hard",
+      "question": "What is the time complexity of binary search on a sorted array?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "answer_index": 1
+    },
+    {
+      "id": "q2",
+      "topic": "data_structures",
+      "difficulty": "easy",
+      "question": "Which Python data structure is immutable?",
+      "options": [
+        "List",
+        "Dictionary",
+        "Tuple",
+        "Set"
+      ],
+      "answer_index": 2
+    },
+    {
+      "id": "q3",
+      "topic": "oop",
+      "difficulty": "medium",
+      "question": "What is the purpose of the '__init__' method in Python classes?",
+      "options": [
+        "Initialize instance attributes",
+        "Delete the instance",
+        "Create a new instance",
+        "Compare two instances"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q4",
+      "topic": "design_patterns",
+      "difficulty": "hard",
+      "question": "What is the Singleton design pattern used for?",
+      "options": [
+        "Ensure only one instance",
+        "Create multiple instances",
+        "Connect different components",
+        "Define interfaces"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q5",
+      "topic": "testing",
+      "difficulty": "medium",
+      "question": "What is unit testing?",
+      "options": [
+        "Testing individual components",
+        "Testing entire system",
+        "Testing user interface",
+        "Testing performance"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q6",
+      "topic": "scalability",
+      "difficulty": "medium",
+      "question": "What is horizontal scaling?",
+      "options": [
+        "Adding more machines",
+        "Increasing server power",
+        "Upgrading hardware",
+        "Optimizing code"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q7",
+      "topic": "basics",
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'self' parameter in Python methods?",
+      "options": [
+        "Refers to the instance calling the method",
+        "Creates a static method",
+        "Returns the method name as string",
+        "Defines method visibility"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q8",
+      "topic": "web",
+      "difficulty": "easy",
+      "question": "What does HTTP stand for?",
+      "options": [
+        "HyperText Transfer Protocol",
+        "High-Speed Transfer Protocol",
+        "Home Page Text Protocol",
+        "Hyperlink Text Transfer Protocol"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q9",
+      "topic": "best_practices",
+      "difficulty": "medium",
+      "question": "What is code review primarily used for?",
+      "options": [
+        "Quality assurance",
+        "Performance optimization",
+        "Documentation",
+        "Testing"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q10",
+      "topic": "complexity",
+      "difficulty": "hard",
+      "question": "Which sorting algorithm has the best average case time complexity?",
+      "options": [
+        "Quick Sort",
+        "Merge Sort",
+        "Heap Sort",
+        "Bubble Sort"
+      ],
+      "answer_index": 1
+    },
+    {
+      "id": "q11",
+      "topic": "functions",
+      "difficulty": "medium",
+      "question": "How do you define a default parameter value in Python functions?",
+      "options": [
+        "param = value",
+        "param: type = value",
+        "param = value:",
+        "param(default=value)"
+      ],
+      "answer_index": 2
+    },
+    {
+      "id": "q12",
+      "topic": "cloud",
+      "difficulty": "medium",
+      "question": "What is a primary benefit of cloud computing?",
+      "options": [
+        "Scalability and flexibility",
+        "Local data storage",
+        "Single server deployment",
+        "Hardware ownership"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q13",
+      "topic": "version_control",
+      "difficulty": "easy",
+      "question": "What does 'git commit' do?",
+      "options": [
+        "Save changes to repository",
+        "Create new repository",
+        "Delete repository",
+        "Clone repository"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q14",
+      "topic": "security",
+      "difficulty": "medium",
+      "question": "What is SQL injection primarily used to prevent?",
+      "options": [
+        "Database attacks",
+        "Network attacks",
+        "File system attacks",
+        "Memory attacks"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q15",
+      "topic": "architecture",
+      "difficulty": "hard",
+      "question": "What is microservices architecture?",
+      "options": [
+        "Small independent services",
+        "Monolithic application",
+        "Layered architecture",
+        "Event-driven architecture"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q16",
+      "topic": "databases",
+      "difficulty": "medium",
+      "question": "What is a primary key in a database table?",
+      "options": [
+        "Unique identifier",
+        "Foreign key reference",
+        "Index key",
+        "Sort key"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q17",
+      "topic": "debugging",
+      "difficulty": "medium",
+      "question": "What is the purpose of a debugger in Python?",
+      "options": [
+        "Find and fix errors",
+        "Optimize performance",
+        "Write documentation",
+        "Test code"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q18",
+      "topic": "control_flow",
+      "difficulty": "easy",
+      "question": "What does the 'pass' statement do in Python?",
+      "options": [
+        "Skip the current iteration",
+        "Terminate the loop",
+        "Return a value from function",
+        "Define a function"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q19",
+      "topic": "performance",
+      "difficulty": "medium",
+      "question": "What is the main benefit of caching?",
+      "options": [
+        "Faster data access",
+        "Data security",
+        "Data compression",
+        "Data validation"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": "q20",
+      "topic": "mobile",
+      "difficulty": "medium",
+      "question": "What is responsive design?",
+      "options": [
+        "Adapts to screen sizes",
+        "Fixed layout design",
+        "Mobile-first design",
+        "Desktop-only design"
+      ],
+      "answer_index": 0
+    }
+  ],
+  "total_questions": 20,
+  "question_topics": [
+    "web",
+    "oop",
+    "data_structures",
+    "performance",
+    "debugging",
+    "testing",
+    "mobile",
+    "functions",
+    "design_patterns",
+    "control_flow",
+    "security",
+    "algorithms",
+    "best_practices",
+    "scalability",
+    "basics",
+    "databases",
+    "architecture",
+    "complexity",
+    "version_control",
+    "cloud"
+  ],
+  "difficulty_distribution": {
+    "easy": 5,
+    "medium": 11,
+    "hard": 4
+  }
+}

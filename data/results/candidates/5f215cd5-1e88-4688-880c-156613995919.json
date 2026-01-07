@@ -1,0 +1,29 @@
+{
+  "attempt_id": "5f215cd5-1e88-4688-880c-156613995919",
+  "timestamp": "2026-01-07T02:54:38.527246",
+  "profile": {
+    "name": "Test User2",
+    "branch": "CSE",
+    "passing_year": 2025,
+    "university": "ADYPU",
+    "programming_language": "Python",
+    "difficulty": "Easy",
+    "assessment_type": "MCQ only"
+  },
+  "registration_data": {
+    "name": "Test User2",
+    "email": "test.user2@example.com",
+    "branch": "CSE",
+    "university": "ADYPU",
+    "programming_language": "Python",
+    "difficulty": "Easy",
+    "assessment_type": "MCQ only"
+  },
+  "test_config": {
+    "total_questions": 20,
+    "duration_seconds": 1200
+  },
+  "finalized_reason": "user_finished",
+  "test_started_at": 1767734642.3422875,
+  "test_completed_at": "2026-01-07T02:54:38.527246"
+}

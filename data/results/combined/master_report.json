@@ -1,0 +1,78 @@
+{
+  "report_generated_at": "2026-01-07T02:54:38.788924",
+  "total_assessments": 5,
+  "candidates": [
+    {
+      "attempt_id": "42359735-7898-4ff3-bcf1-b43c4b133a23",
+      "name": "Kamlesh Pawar",
+      "university": "ADYPU",
+      "programming_language": "Python",
+      "difficulty": "Easy",
+      "score": 3,
+      "percentage": 15.0,
+      "performance_level": "Poor",
+      "total_time": 119,
+      "completed_at": "2026-01-07T02:54:38.571355"
+    },
+    {
+      "attempt_id": "5f215cd5-1e88-4688-880c-156613995919",
+      "name": "Test User2",
+      "university": "ADYPU",
+      "programming_language": "Python",
+      "difficulty": "Easy",
+      "score": 2,
+      "percentage": 10.0,
+      "performance_level": "Poor",
+      "total_time": 36,
+      "completed_at": "2026-01-07T02:54:38.581007"
+    },
+    {
+      "attempt_id": "b056ddb7-ac0b-480a-b76a-3c1615b5396c",
+      "name": "Test User",
+      "university": "Test University",
+      "programming_language": "Python",
+      "difficulty": "Medium",
+      "score": 0,
+      "percentage": 0,
+      "performance_level": "Unknown",
+      "total_time": 0,
+      "completed_at": "2026-01-07T02:54:38.778674"
+    },
+    {
+      "attempt_id": "c30f0c00-6d76-43d5-ae89-77333d37e155",
+      "name": "Test User",
+      "university": "ADYPU",
+      "programming_language": "Python",
+      "difficulty": "Easy",
+      "score": 1,
+      "percentage": 5.0,
+      "performance_level": "Poor",
+      "total_time": 34,
+      "completed_at": "2026-01-07T02:54:38.781862"
+    },
+    {
+      "attempt_id": "unknown",
+      "name": "Unknown",
+      "university": "Unknown",
+      "programming_language": "Unknown",
+      "difficulty": "Unknown",
+      "score": 0,
+      "percentage": 0,
+      "performance_level": "Unknown",
+      "total_time": 0,
+      "completed_at": "Unknown"
+    }
+  ],
+  "performance_summary": {
+    "excellent": 0,
+    "good": 0,
+    "average": 0,
+    "below_average": 0,
+    "poor": 3
+  },
+  "analytics": {
+    "average_score": 10.0,
+    "average_time": 63.0,
+    "pass_rate": 0.0
+  }
+}

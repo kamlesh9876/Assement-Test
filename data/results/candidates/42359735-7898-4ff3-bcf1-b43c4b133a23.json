@@ -1,0 +1,29 @@
+{
+  "attempt_id": "42359735-7898-4ff3-bcf1-b43c4b133a23",
+  "timestamp": "2026-01-07T02:38:46.193929",
+  "profile": {
+    "name": "Kamlesh Pawar",
+    "branch": "CSE",
+    "passing_year": 2025,
+    "university": "ADYPU",
+    "programming_language": "Python",
+    "difficulty": "Easy",
+    "assessment_type": "MCQ only"
+  },
+  "registration_data": {
+    "name": "Kamlesh Pawar",
+    "email": "kamlesh.pawar@example.com",
+    "branch": "CSE",
+    "university": "ADYPU",
+    "programming_language": "Python",
+    "difficulty": "Easy",
+    "assessment_type": "MCQ only"
+  },
+  "test_config": {
+    "total_questions": 20,
+    "duration_seconds": 1200
+  },
+  "finalized_reason": "user_finished",
+  "test_started_at": 1767733606.955492,
+  "test_completed_at": "2026-01-07T02:38:46.193929"
+}

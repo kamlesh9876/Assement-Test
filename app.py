@@ -1193,7 +1193,7 @@ def _render_result() -> None:
 
 
 def _finalize_attempt(reason: str) -> None:
-    """Finalize the assessment attempt - simplified to avoid duplicates"""
+    """Finalize the assessment attempt and save all data in JSON format"""
     if not st.session_state.profile or not st.session_state.questions:
         return
     
@@ -1210,19 +1210,170 @@ def _finalize_attempt(reason: str) -> None:
         if st.session_state.answers.get(q["id"]) == q["answer_index"]
     )
     
-    # Create result object
+    # Get attempt ID
+    attempt_id = st.session_state.get('attempt_id', str(uuid.uuid4()))
+    
+    # Create base data structure
+    timestamp = datetime.now().isoformat()
+    
+    # 1. Save candidate data
+    candidate_data = {
+        "attempt_id": attempt_id,
+        "timestamp": timestamp,
+        "profile": {
+            "name": st.session_state.profile.name,
+            "branch": st.session_state.profile.branch,
+            "passing_year": st.session_state.profile.passing_year,
+            "university": st.session_state.profile.university,
+            "programming_language": st.session_state.profile.programming_language,
+            "difficulty": st.session_state.profile.difficulty,
+            "assessment_type": st.session_state.profile.assessment_type
+        },
+        "registration_data": st.session_state.get('registration_data', {}),
+        "test_config": {
+            "total_questions": total_questions,
+            "duration_seconds": st.session_state.test_config.duration_seconds if st.session_state.test_config else 1200
+        },
+        "finalized_reason": reason,
+        "test_started_at": st.session_state.test_started_at,
+        "test_completed_at": timestamp
+    }
+    
+    # 2. Save questions data
+    questions_data = {
+        "attempt_id": attempt_id,
+        "timestamp": timestamp,
+        "questions": st.session_state.questions,
+        "total_questions": total_questions,
+        "question_topics": list(set(q.get('topic', 'General') for q in st.session_state.questions)),
+        "difficulty_distribution": {
+            "easy": len([q for q in st.session_state.questions if q.get('difficulty') == 'easy']),
+            "medium": len([q for q in st.session_state.questions if q.get('difficulty') == 'medium']),
+            "hard": len([q for q in st.session_state.questions if q.get('difficulty') == 'hard'])
+        }
+    }
+    
+    # 3. Save responses data
+    responses_data = {
+        "attempt_id": attempt_id,
+        "timestamp": timestamp,
+        "responses": st.session_state.get('assessment_results', []),
+        "answers": st.session_state.answers,
+        "total_answered": len(st.session_state.answers),
+        "unanswered": [q["id"] for q in st.session_state.questions if q["id"] not in st.session_state.answers]
+    }
+    
+    # 4. Save scores and analytics
+    percentage = (correct / total_questions * 100) if total_questions > 0 else 0
+    
+    scores_data = {
+        "attempt_id": attempt_id,
+        "timestamp": timestamp,
+        "scores": {
+            "total_questions": total_questions,
+            "correct_answers": correct,
+            "incorrect_answers": total_questions - correct,
+            "total_score": correct,
+            "max_score": total_questions,
+            "percentage": round(percentage, 2)
+        },
+        "analytics": {
+            "performance_level": get_performance_level(percentage),
+            "finalized_reason": reason,
+            "time_taken_seconds": time_taken,
+            "average_time_per_question": round(time_taken / total_questions, 2) if total_questions > 0 else 0
+        },
+        "performance_metrics": {
+            "total_time_seconds": time_taken,
+            "average_response_time": round(time_taken / total_questions, 2) if total_questions > 0 else 0,
+            "time_per_question": round(time_taken / total_questions, 2) if total_questions > 0 else 0,
+            "completion_rate": round(len(st.session_state.answers) / total_questions * 100, 2) if total_questions > 0 else 0
+        }
+    }
+    
+    # Add user context if available
+    if st.session_state.get('user_context'):
+        user_context = st.session_state.user_context
+        scores_data["user_context"] = {
+            "current_score": user_context.current_score,
+            "questions_attempted": user_context.questions_attempted,
+            "correct_answers": user_context.correct_answers,
+            "average_response_time": user_context.average_response_time,
+            "current_streak": user_context.current_streak,
+            "confidence_level": user_context.confidence_level,
+            "engagement_level": user_context.engagement_level
+        }
+    
+    # Save all data to respective folders
+    try:
+        results_dir = Path("data/results")
+        
+        # Create directories if they don't exist
+        (results_dir / "candidates").mkdir(exist_ok=True)
+        (results_dir / "questions").mkdir(exist_ok=True)
+        (results_dir / "responses").mkdir(exist_ok=True)
+        (results_dir / "scores").mkdir(exist_ok=True)
+        
+        # Save candidate data
+        with open(results_dir / "candidates" / f"{attempt_id}.json", 'w', encoding='utf-8') as f:
+            json.dump(candidate_data, f, indent=2, ensure_ascii=False)
+        
+        # Save questions data
+        with open(results_dir / "questions" / f"{attempt_id}.json", 'w', encoding='utf-8') as f:
+            json.dump(questions_data, f, indent=2, ensure_ascii=False)
+        
+        # Save responses data
+        with open(results_dir / "responses" / f"{attempt_id}.json", 'w', encoding='utf-8') as f:
+            json.dump(responses_data, f, indent=2, ensure_ascii=False)
+        
+        # Save scores data
+        with open(results_dir / "scores" / f"{attempt_id}.json", 'w', encoding='utf-8') as f:
+            json.dump(scores_data, f, indent=2, ensure_ascii=False)
+        
+        logging.info(f"Assessment data saved for attempt {attempt_id}")
+        
+        # Automatically run data combination after successful save
+        try:
+            from combine_data import DataCombiner
+            
+            print("🔄 Running automatic data combination...")
+            combiner = DataCombiner()
+            results = combiner.process_all_attempts()
+            master_report = combiner.generate_master_report()
+            
+            if results['successful_combinations'] > 0:
+                print(f"✅ Data combination completed successfully")
+                print(f"   Combined {results['successful_combinations']} attempts")
+                print(f"   Master report updated with {master_report.get('total_assessments', 0)} total assessments")
+                logging.info(f"Automatic data combination completed: {results['successful_combinations']} attempts")
+            else:
+                print("ℹ️ No new data to combine")
+                logging.info("No new data found for combination")
+                
+        except ImportError as e:
+            print(f"⚠️ Data combiner not available: {e}")
+            logging.warning(f"Data combiner module not found: {e}")
+        except Exception as e:
+            print(f"⚠️ Auto-combination error: {e}")
+            logging.error(f"Auto-combination error: {e}")
+        
+    except Exception as e:
+        logging.error(f"Error saving assessment data: {e}")
+    
+    # Create result object for session state
     result = {
-        'attempt_id': st.session_state.get('attempt_id', 'unknown'),
+        'attempt_id': attempt_id,
         'finalized_reason': reason,
         'metrics': {
             'total_questions': total_questions,
             'correct': correct,
             'incorrect': total_questions - correct,
+            'percentage': percentage,
             'time_taken_seconds': time_taken
         }
     }
     
-    # Store result
+    # Store result in session state
     st.session_state.result = result
     
     # Stop camera
@@ -1240,48 +1391,20 @@ def _finalize_attempt(reason: str) -> None:
             """,
             height=0
         )
-    
-    # Navigate to result page
-    _set_page("result")
-    answers = st.session_state.answers
-    profile = st.session_state.profile
-    
-    # Calculate metrics
-    correct = 0
-    incorrect = 0
-    
-    for q in questions:
-        user_answer = answers.get(q["id"])
-        is_correct = user_answer is not None and user_answer == q["answer_index"]
-        
-        if is_correct:
-            correct += 1
-        else:
-            incorrect += 1
-    
-    # Store result
-    st.session_state.result = {
-        "attempt_id": st.session_state.attempt_id,
-        "finalized_reason": reason,
-        "metrics": {
-            "correct": correct,
-            "incorrect": incorrect,
-            "total_questions": len(questions),
-            "time_taken_seconds": time_taken,
-            "accuracy": (correct / len(questions) * 100) if questions else 0
-        },
-        "profile": asdict(profile),
-        "answers": answers,
-        "submitted_at": datetime.now().isoformat()
-    }
-    
-    # Update user context if available
-    if st.session_state.user_context:
-        user_context = st.session_state.user_context
-        user_context.questions_attempted = len(questions)
-        user_context.correct_answers = correct
-        user_context.current_score = correct / len(questions) if questions else 0
-        user_context.average_response_time = time_taken / len(questions) if questions else 0
+
+
+def get_performance_level(percentage: float) -> str:
+    """Determine performance level based on percentage"""
+    if percentage >= 90:
+        return "Excellent"
+    elif percentage >= 80:
+        return "Good"
+    elif percentage >= 70:
+        return "Average"
+    elif percentage >= 60:
+        return "Below Average"
+    else:
+        return "Poor"
 
 
 def _remaining_seconds() -> int:
